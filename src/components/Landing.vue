@@ -7,7 +7,7 @@ defineProps<{ msg: string }>()
 
 <template>
   <div class="w-1/5">
-    <img class="w-1/2 mx-auto" src="/robot.svg"/>
+    <img class="w-1/2 mx-auto" src="/robot.svg" alt="MoBot logo"/>
     <h1>{{ msg }}</h1>
   </div>
 </template>
