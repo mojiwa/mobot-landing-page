@@ -11,10 +11,10 @@
             <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
               <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                 <div class="flex w-full items-center justify-between md:w-auto">
-                  <a href="#">
+                  <!-- <a href="#">
                     <span class="sr-only">MoBot</span>
-                    <img alt="MoBot Logo" class="h-8 w-auto sm:h-10" src="/robot.svg" />
-                  </a>
+                    <img alt="MoBot Logo" class="h-24 w-auto sm:h-24 p-2" src="/robot.svg" />
+                  </a> -->
                   <div class="-mr-2 flex items-center md:hidden">
                     <PopoverButton class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span class="sr-only">Open main menu</span>
@@ -35,7 +35,7 @@
               <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div class="flex items-center justify-between px-5 pt-4">
                   <div>
-                    <img class="h-8 w-auto" src="/robot.svg" alt="" />
+                    <img class="h-8 w-auto" src="/robot-face.svg" alt="" />
                   </div>
                   <div class="-mr-2">
                     <PopoverButton class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -55,11 +55,14 @@
 
         <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div class="sm:text-center lg:text-left">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              <span class="block xl:inline">The only Discord bot</span>
-              {{ ' ' }}
-              <span class="block text-indigo-600 xl:inline">you need</span>
-            </h1>
+            <div class="flex">
+              <img alt="MoBot Logo" class="h-20 md:h-36 w-auto mr-6" src="/robot.svg" />
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                <span class="block xl:inline">The only Discord bot</span>
+                {{ ' ' }}
+                <span class="block text-indigo-600 xl:inline">you need</span>
+              </h1>
+            </div>
             <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">Imagine if you could have one Discord bot to manage role reactions, pronoun picking, custom commands, streaming alerts, and more! All at a fraction of the cost compared to the competition.</p>
             <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">MoBot is coming soon...</p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
