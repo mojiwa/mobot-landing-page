@@ -1,5 +1,5 @@
 <template>
- <div class="relative container mx-auto overflow-hidden bg-white rounded-t-lg">
+ <div class="relative container mx-auto overflow-hidden bg-white rounded-t-lg lg:w-2/3">
     <div class="mx-auto max-w-full">
       <div class="relative z-10 bg-white w-full pb-32">
         <svg class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -8,7 +8,7 @@
 
         <Popover>
           <div class="relative pt-6 px-8">
-            <nav class="relative flex items-center h-10 justify-start" aria-label="Global">
+            <nav class="relative flex items-center h-10 justify-start xl:px-10 2xl:justify-center" aria-label="Global">
               <div class="flex flex-shrink-0 items-center flex-grow-0">
                 <div class="flex w-full items-center justify-between">
                   <div class="-mr-2 flex items-center md:hidden">
@@ -52,16 +52,16 @@
         <main class="mx-auto max-w-7xl px-8 mt-28">
           <div class="text-left">
             <div class="flex">
-              <img alt="MoBot Logo" class="h-24 md:h-36 w-auto mr-6" src="/robot.svg" />
-              <h1 class="text-4xl font-bold tracking-tight text-mobot-dark-gray-300 sm:text-5xl md:text-6xl">
+              <img alt="MoBot Logo" class="h-24 lg:h-36 w-auto mr-6" src="/robot.svg" />
+              <h1 class="text-4xl font-bold tracking-tight text-mobot-dark-gray-300 sm:text-5xl lg:text-6xl w-full">
                 <span class="inline">The only Discord bot</span>
                 <p>
                   <span class="text-mobot-purple-400 inline">you need</span>
                 </p>
               </h1>
             </div>
-            <p class="mt-3 text-base text-mobot-dark-gray-200 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">Imagine if you could have one Discord bot to manage role reactions, pronoun picking, custom commands, streaming alerts, and more! All at a fraction of the cost compared to the competition.</p>
-            <p class="mt-3 text-base text-mobot-dark-gray-200 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">MoBot is coming soon...</p>
+            <p class="mt-3 text-base text-mobot-dark-gray-200 sm:mx-auto sm:mt-5 lg:max-w-3xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">Imagine if you could have one Discord bot to manage role reactions, pronoun picking, custom commands, streaming alerts, and more! All at a fraction of the cost compared to the competition.</p>
+            <p class="mt-3 text-base text-mobot-dark-gray-200 sm:mx-auto sm:mt-5 lg:max-w-3xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">MoBot is coming soon...</p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-md shadow">
                 <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-mobot-purple-300 px-8 py-3 text-base font-medium text-white hover:bg-mobot-purple-400 md:py-4 md:px-10 md:text-lg">Add Bot</a>
