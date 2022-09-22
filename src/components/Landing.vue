@@ -37,7 +37,7 @@
           <div class="relative pt-6 px-8 flex">
             <a href="#">
               <div class="hidden md:flex">
-                <img class="h-10" src="robot-face.svg" alt="MoBot Logo" />
+                <img class="h-10" src="/robot-face.svg" alt="MoBot Logo" />
                 <div class="ml-5 text-2xl font-bold text-mobot-purple-400 self-center">MoBot</div>
               </div>            
             </a>
