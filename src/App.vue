@@ -1,15 +1,19 @@
-<script setup lang="ts">
+<script lang="ts">
 
-import Landing from './components/Landing.vue';
+import { defineComponent } from '@vue/runtime-core';
+import LandingVue from './components/Landing.vue';
+
+export default defineComponent({
+  Name: 'Application',
+  components: {
+    LandingVue
+  }
+});
 
 </script>
 
 <template>
   <div>
-    <Landing />
+    <LandingVue />
   </div>
 </template>
-
-<style scoped>
-
-</style>

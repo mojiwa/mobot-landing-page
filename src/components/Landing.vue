@@ -1,14 +1,47 @@
-<template>
- <div class="relative container mx-auto overflow-hidden bg-white rounded-t-lg lg:w-2/3">
-    <div class="mx-auto max-w-full">
-      <div class="relative z-10 bg-white w-full pb-32">
-        <svg class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-          <polygon points="50,0 100,0 50,100 0,100" />
-        </svg>
+<script lang="ts">
+  import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue';
+  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+  import { defineComponent } from 'vue';
 
+  export default defineComponent({
+    name: 'Landing',
+    components: {
+      Bars3Icon,
+      XMarkIcon,
+      Popover,
+      PopoverButton,
+      PopoverPanel
+    },
+    setup() {
+      
+      const navigation = [
+        { name: 'Features', href: '#features' },
+        { name: 'Pricing', href: '#pricing' },
+        { name: 'Documentation', href: '#documentation' },
+        { name: 'Support', href: '#support' },
+      ];
+      
+      return {
+       navigation,       
+      }
+    }
+  });
+</script>
+
+
+<template>
+ <div class="relative container mx-auto overflow-hidden bg-white rounded-t-lg max-w-7xl">
+    <div class="mx-auto">
+      <div class="relative z-10 bg-white pb-32">
         <Popover>
-          <div class="relative pt-6 px-8">
-            <nav class="relative flex items-center h-10 justify-start xl:px-10 2xl:justify-center" aria-label="Global">
+          <div class="relative pt-6 px-8 flex">
+            <a href="#">
+              <div class="hidden md:flex">
+                <img class="h-10" src="robot-face.svg" alt="MoBot Logo" />
+                <div class="ml-5 text-2xl font-bold text-mobot-purple-400 self-center">MoBot</div>
+              </div>            
+            </a>
+            <nav class="relative flex items-center h-10 justify-center" aria-label="Global">
               <div class="flex flex-shrink-0 items-center flex-grow-0">
                 <div class="flex w-full items-center justify-between">
                   <div class="-mr-2 flex items-center md:hidden">
@@ -19,9 +52,9 @@
                   </div>
                 </div>
               </div>
-              <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
+              <div class="hidden md:block md:space-x-10 md:ml-16 xl:ml-28 xl:space-x-32">
                 <a v-for="item in navigation" :key="item.name" :href="item.href" class="font-medium text-mobot-dark-gray-200 hover:text-mobot-dark-gray-300">{{ item.name }}</a>
-                <a href="#" target="_blank" class="font-medium text-mobot-purple-400 hover:text-mobot-purple-300">Log in</a>
+                <a href="#" class="font-medium text-mobot-purple-400 hover:text-mobot-purple-300">Log in</a>
               </div>
             </nav>
           </div>
@@ -30,9 +63,12 @@
             <PopoverPanel focus class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden">
               <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div class="flex items-center justify-between px-5 pt-4">
-                  <div>
-                    <img class="h-8 w-auto" src="/robot-face.svg" alt="" />
-                  </div>
+                  <a href="#">
+                    <div class="flex">                    
+                        <img class="h-8 w-auto" src="/robot-face.svg" alt="" />
+                        <div class="ml-5 text-2xl font-bold text-mobot-purple-400 self-center">MoBot</div>                  
+                    </div>
+                  </a>
                   <div class="-mr-2">
                     <PopoverButton class="inline-flex items-center justify-center rounded-md bg-white p-2 text-mobot-gray-200 hover:bg-mobot-gray-100 hover:text-mobot-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-mobot-purple-400">
                       <span class="sr-only">Close main menu</span>
@@ -43,20 +79,20 @@
                 <div class="space-y-1 px-2 pt-2 pb-3">
                   <a v-for="item in navigation" :key="item.name" :href="item.href" class="block rounded-md px-3 py-2 text-base font-medium text-mobot-dark-gray-200 hover:bg-mobot-gray-100 hover:text-mobot-dark-gray-300">{{ item.name }}</a>
                 </div>
-                <a href="#" target="_blank" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-mobot-purple-400 hover:bg-mobot-gray-100">Log in</a>
+                <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-mobot-purple-400 hover:bg-mobot-gray-100">Log in</a>
               </div>
             </PopoverPanel>
           </transition>
         </Popover>
 
-        <main class="mx-auto max-w-7xl px-8 mt-28">
+        <main class="mx-auto px-8 mt-28">
           <div class="text-left">
             <div class="flex">
               <img alt="MoBot Logo" class="h-24 lg:h-36 w-auto mr-6" src="/robot.svg" />
               <h1 class="text-4xl font-bold tracking-tight text-mobot-dark-gray-300 sm:text-5xl lg:text-6xl w-full">
                 <span class="inline">The only Discord bot</span>
                 <p>
-                  <span class="text-mobot-purple-400 inline">you need</span>
+                  <span class="text-mobot-purple-400 inline">your server needs</span>
                 </p>
               </h1>
             </div>
@@ -71,20 +107,28 @@
               </div>
             </div>
           </div>
+          <div>
+            <div class="mt-10">
+              <a id="features">
+                <div class="text-2xl font-bold text-mobot-dark-gray-300-400 self-center">Coming Soon...</div>
+                <img src="https://www.upvoty.com/wp-content/uploads/2020/09/features.png" alt="features"/>
+              </a>
+            </div>
+            <div class="mt-10">
+              <a id="pricing" class="mt-10">
+                <div class="text-2xl font-bold text-mobot-dark-gray-300-400 self-center">Coming Soon...</div>
+                <img src="https://img.freepik.com/free-vector/modern-comparison-plans-pricing-template_1017-32013.jpg?w=2000" alt="pricing"/>
+              </a>
+            </div>
+            <div class="mt-10">
+              <a id="support" class="mt-10">
+                <div class="text-2xl font-bold text-mobot-dark-gray-300-400 self-center">Coming Soon...</div>
+                <img src="https://d2gppjca7iyv2p.cloudfront.net/reportandsupport.yorksj.ac.uk/HE3Bs7c33DFJa5Zz" alt="support"/>
+              </a>
+            </div>
+          </div>
         </main>
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-  import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
-  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-  
-  const navigation = [
-    { name: 'Features', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Support', href: '#' },
-  ]
-  </script>
