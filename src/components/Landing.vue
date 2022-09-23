@@ -16,9 +16,9 @@
       
       const navigation = [
         { name: 'Features', href: '#features' },
-        { name: 'Pricing', href: '#pricing' },
-        { name: 'Documentation', href: '#documentation' },
+        { name: 'Pricing', href: '#pricing' },        
         { name: 'Support', href: '#support' },
+        { name: 'Documentation', href: '#documentation' },
       ];
       
       return {
